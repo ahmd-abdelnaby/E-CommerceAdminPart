@@ -1,0 +1,10 @@
+<div class="card" style="width: auto;height: 88vh;">
+    <!-- <img class="card-img-top" src="assets/{{prd.Img}}" alt="Card image cap"> -->
+    <img class="card-img-top" src="http://localhost:62584/Image/get?ImageName={{prd.Img}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Name:{{prd.Name}}</h5>
+      <h5 class="card-title">Price:{{prd.Price}}</h5>
+      <h5 class="card-title">Quantity:{{prd.Quantity}}</h5>
+      <button href="#" class="btn btn-primary" (click)="update(prd.ID)">EDIT</button>
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+<button [routerLink]="['/NewProduct']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary">Add+</button>
+<table class="table table-striped table-bordered">
+    <thead>
+      <tr class="bg-white text-dark">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Qunantity</th>
+        <th>img</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- [hidden] = "prd.Quantity === 0"  -->
+      <!-- [class.bg-primary] = "prd.Quantity === 0" -->
+      <tr *ngFor="let prd of prdList; let i =index">
+      <!-- <tr *ngFor="let prd of ProdsByCatId; let i =index"> -->
+        <td>{{prd.ID}}</td>
+        <td>{{prd.Name}}</td>
+        <td>{{prd.Price}}</td>
+        <td>{{prd.Quantity}}</td>
+        
+       <img style="width: 70px;height: 50px;" src="assets/{{prd.Img}}" alt="">
+      <td ><a [routerLink]="['/ApiProduct',prd.ID]" routerLinkActive="router-link-active" >View details</a></td>
+      </tr>
+    </tbody>
+  </table>
